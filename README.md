@@ -1,3 +1,0 @@
-# Meier_Blaettler_Maisenbacher_MMA25cL_Gruppe1
-
-mir sind alli gay
