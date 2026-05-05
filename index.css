@@ -1,0 +1,254 @@
+/* --------------------------------------------------
+   Base Styles
+   -------------------------------------------------- */
+
+body {
+    background-color: #4deb6f;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h3,
+h5 {
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 1000;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+p {
+    font-family: 'Zalando Sans SemiExpanded', sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+header {
+    margin: 50px;
+}
+
+/* --------------------------------------------------
+   Navbar / Navigation
+   -------------------------------------------------- */
+
+/* W3.CSS navbar presets:
+   - w3-bar        = horizontal bar container
+   - w3-bar-item   = item inside the bar
+   - w3-button     = button styling for links
+   - w3-dark-green = predefined dark green background
+   - w3-blue       = predefined blue background
+   - w3-red        = predefined red background
+   - w3-black      = predefined black background
+   - w3-light-grey = predefined light grey background
+   Example: <nav class="w3-bar w3-dark-green"> ... </nav>
+
+  Folgende Notiz obendran) von CoPilot generiert
+*/
+
+nav.w3-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px; /* Abstand zwischen den Menüpunkten */
+    margin: 15px auto; /* zentriert die Navbar horizontal */
+    width: 95%;
+    height: auto;
+    border-radius: 30px !important;
+    background-color: #53f375 !important;
+    border: 1px solid #3bc972 !important;
+    align-content: center;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1); /* leichte Schattenkante */
+    position: relative;
+}
+
+nav.w3-bar .w3-bar-item {
+    font-weight: 700; /*-- fetter Text für bessere Lesbarkeit --*/
+    color: black;
+    background-color: transparent;
+    transition: color 0.3s ease, background-color 0.3s ease; /*--übergangszeit und farbe für Hover-Effekt--*/
+    white-space: normal;
+    text-align: center;
+    padding: 10px 12px;
+    min-width: 140px;
+    max-width: 95%;
+}
+
+/* Desktop navbar */
+.desktop-nav {
+  display: flex; /*--stellt sicher, dass die Links nebeneinander stehen--*/
+  align-items: center; /*--zentriert die Links vertikal--*/
+  position: sticky; /*--navbar bleibt immer oben--*/
+  top: 0;
+  z-index: 100;
+}
+
+.desktop-nav a {
+  display: inline-block; /*--stellt sicher, dass die Links nebeneinander stehen--*/
+}
+
+/* Mobile navbar */
+.topnav {
+  overflow: hidden; /*--verhindert, dass der Inhalt überläuft--*/
+  background-color: #2d6a2d;
+  position: sticky; /*--navbar bleibt immer oben--*/
+  top: 0; /*--Positionierung oben--*/
+  z-index: 100; /*--sorgt dafür, dass die Navbar über anderen Inhalten liegt--*/
+  display: none;/*--wird nur auf mobilen Geräten angezeigt--*/
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+/* Mobile Topnav-Link-Styling: sauberer Block-Look, gut klickbar */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Hamburger-Icon im mobilen Menü: absolut positioniert rechts oben */
+.topnav a.icon {
+  background: none;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+/* Hover-Effekt für bessere Interaktion auf Touch-Alternativen */
+.topnav a:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+/* --------------------------------------------------
+   Hamburger Menu Button W3C School
+   -------------------------------------------------- */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* --------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------- */
+
+/*
+  Breakpoints sind Schwellenwerte, bei denen sich das Layout an die Bildschirmgröße
+  anpasst. Hier haben wir drei Stufen:
+  - bis 768px: Mobilansicht aktiviert, Desktop-Navigation ausgeblendet
+  - bis 600px: Navigation in ein vertikales Menü verwandelt, Hamburger-Icon sichtbar
+  - bis 450px: Feinschliff für sehr kleine Displays
+
+  Diese Media Queries sorgen dafür, dass die Seite auf Tablets und Smartphones
+  übersichtlich bleibt, ohne das Desktop-Layout für große Bildschirme zu stören.
+
+  CoPilot generiert
+*/
+
+@media (max-width: 600px) {
+    /* Auf kleinen Bildschirmen erhält die Hauptnavigation ein vertikales Layout.
+       Dadurch können die Menüpunkte einfacher getippt werden, und der Inhalt passt
+       sich der engen Breite des Displays an. */
+    nav.w3-bar {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    /* Hamburger-Button anzeigen, damit das Menü bei Bedarf aufgeklappt werden kann. */
+    .hamburger {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 10px;
+    }
+
+    /* Standardmäßig werden die Menüeinträge versteckt und nur per Hamburger
+       Menü zugänglich gemacht, um Platz zu sparen. */
+    nav.w3-bar .w3-bar-item {
+        display: none;
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    /* Sobald das Menü geöffnet ist, werden die Links wieder angezeigt. */
+    nav.w3-bar.open .w3-bar-item {
+        display: block;
+    }
+
+    /* Diese Ausrichtung sorgt dafür, dass die einzelnen Elemente oben beginnen
+       und nicht zentriert im Container angeordnet werden. */
+    nav.w3-bar {
+        align-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+  /* Ab Tablet-Größe wird die Desktop-Navigation ausgeblendet und die mobile
+     Topnav-Variante aktiviert. So bleibt die Navigation auch auf kleineren
+     Bildschirmen bedienbar. */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .topnav {
+    display: block !important;
+  }
+  
+  /* Das zusätzliche .show-Klassen-Target erlaubt es, den versteckten Linkbereich
+     über JavaScript sichtbar zu machen, wenn das Hamburger-Icon getippt wird. */
+  #myLinks.show {
+    display: block !important;
+  }
+}
+
+@media (max-width: 450px) {
+    nav.w3-bar {
+        gap: 8px;
+    }
+
+    nav.w3-bar .w3-bar-item {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+}
+
+
+
+
+
