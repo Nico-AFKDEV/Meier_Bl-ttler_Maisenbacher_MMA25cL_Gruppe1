@@ -1,0 +1,139 @@
+/* ===================================================
+   4.css – Styles für html/4.html (Robin's Fussballplatz)
+
+   Robin schreibt über Fussball.
+   Die Seite sieht gleich aus wie alle anderen –
+   nur der Inhalt ist anders.
+   =================================================== */
+
+
+/* ─── GRUNDLAGE DER SEITE ───────────────────────────
+   Das ist die Hintergrundfarbe – wie die Wand im Zimmer.
+   Alles andere kommt auf diese "Wand" drauf. */
+body {
+  background-color: #f0f4f0; /* hellgrünes Grau */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;      /* kein Aussenabstand */
+  color: #1a1a1a; /* fast schwarz – gut lesbar */
+}
+
+/* ─── HEADER (KOPFZEILE) GANZ OBEN ──────────────────
+   Der grosse grüne Balken ganz oben.
+   So wie ein Schild vor einem Fussballstadion. */
+.seiten-header {
+  background-color: #2e7d32; /* dunkelgrün */
+  color: white;
+  padding: 30px 40px;
+}
+
+/* Haupttitel im Header */
+.seiten-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+}
+
+/* Kleiner Satz unter dem Haupttitel */
+.seiten-header p {
+  margin: 0;
+  opacity: 0.85; /* leicht durchsichtig */
+}
+
+/* ─── INHALTS-BEREICH ────────────────────────────────
+   Begrenzt die Breite des Texts.
+   "auto" zentriert alles automatisch in der Mitte. */
+.seiteninhalt {
+  max-width: 840px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+/* ─── JEDE INHALTS-KARTE ─────────────────────────────
+   Jeder Abschnitt ist eine weisse Box/Karte.
+   Links hat sie einen grünen Strich – wie eine
+   Spielfeldmarkierung auf dem Rasen. */
+.abschnitt {
+  background-color: white;
+  border-radius: 8px;
+  padding: 22px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* leichter Schatten */
+  border-left: 4px solid #4caf50;             /* grüner Strich links */
+}
+
+/* ─── ÜBERSCHRIFTEN IN DEN KARTEN ───────────────────
+   Dunkelgrün, damit man weiss wo ein neuer Teil beginnt. */
+.abschnitt h2 {
+  color: #2e7d32;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* ─── NORMALER TEXT ──────────────────────────────────
+   Grosser Zeilenabstand = leichter zu lesen.
+   So wie in einem Buch für ältere Kinder. */
+.abschnitt p {
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+
+/* ===================================================
+   4 SPALTEN – REAGIERT AUF GRÖSSE
+
+   Desktop (>768px):  4 Spalten nebeneinander
+   Tablet  (≤768px):  2 Spalten
+   Handy   (≤480px):  1 Spalte
+   =================================================== */
+
+/* Titel über dem 4-Spalten-Abschnitt */
+.spalten-titel {
+  color: #2e7d32;
+  font-size: 1.25rem;
+  margin: 40px 0 16px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4caf50;
+}
+
+/* 4 gleich breite Spalten nebeneinander */
+.four-col-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+/* Jede Spalte: weisse Karte mit grüner Linie unten */
+.four-col-section .spalte {
+  background-color: white;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  border-bottom: 4px solid #4caf50;
+  text-align: center;
+}
+
+.four-col-section .spalte h2 {
+  color: #2e7d32;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.four-col-section .spalte p {
+  line-height: 1.65;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Tablet: 4 → 2 Spalten */
+@media (max-width: 768px) {
+  .four-col-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Handy: 2 → 1 Spalte */
+@media (max-width: 480px) {
+  .four-col-section {
+    grid-template-columns: 1fr;
+  }
+}

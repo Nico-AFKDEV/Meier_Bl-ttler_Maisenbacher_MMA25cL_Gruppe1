@@ -3,16 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <title>Spalten – MMA25cL Gruppe 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/2.css">
 </head>
 <body>
 
-  <div class="w3-container">
-    <h1>Heading</h1>
-    <p>Your content here.</p>
+<nav class="w3-bar w3-dark-green desktop-nav" id="navbar">
+  <div id="myNavItems">
+    <a href="../index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="2.html" class="w3-bar-item w3-button aktiv">Spalten</a>
+    <a href="3.html" class="w3-bar-item w3-button">Multimedia</a>
+    <a href="4.html" class="w3-bar-item w3-button">Robin's Fussballplatz</a>
+    <a href="5.html" class="w3-bar-item w3-button">Maurice's nexter.dev</a>
+    <a href="Playground.html" class="w3-bar-item w3-button">Nico Box</a>
   </div>
+</nav>
 
+<div class="topnav">
+  <a href="../index.html" class="active">Logo</a>
+  <div id="myLinks">
+    <a href="../index.html">Home</a>
+    <a href="2.html">Spalten</a>
+    <a href="3.html">Multimedia</a>
+    <a href="4.html">Robin's Fussballplatz</a>
+    <a href="5.html">Maurice's nexter.dev</a>
+    <a href="Playground.html">Nico Box</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<header class="seiten-header">
+  <h1>Spalten</h1>
+  <p>2 Spalten – immer nebeneinander, auf jedem Gerät</p>
+</header>
+
+<main class="seiteninhalt">
+
+  <!-- ─── 2 SPALTEN ──────────────────────────────────────────
+       Beide Spalten sind immer 50% breit – auch auf dem Handy!
+       Sie stapeln sich NIE, weil w3-half keine Breakpoints hat.
+       ─────────────────────────────────────────────────────── -->
+  <h2 class="spalten-titel">2 Spalten – Desktop und Smartphone nebeneinander</h2>
+
+  <section class="w3-row two-col-section">
+
+    <div class="w3-half col-left">
+      <h2>Spalte 1 – Links</h2>
+      <p>
+        Diese Spalte ist immer <strong>50% breit</strong> – auf dem grossen
+        Bildschirm genauso wie auf dem Smartphone. Sie stapelt sich nie,
+        weil <code>w3-half</code> aus W3.CSS keine Breakpoints hat.
+      </p>
+    </div>
+
+    <div class="w3-half col-right">
+      <h2>Spalte 2 – Rechts</h2>
+      <p>
+        Auch diese Spalte bleibt immer bei <strong>50% Breite</strong>.
+        Das ist der Unterschied zu Bootstrap – dort würde sie auf kleinen
+        Bildschirmen auf 100% wachsen und stapeln.
+      </p>
+    </div>
+
+  </section>
+  <div class="w3-clear"></div>
+
+  <p class="hinweis">
+    Das <strong>3-Spalten-Layout</strong> findest du auf der Seite
+    <a href="3.html">Multimedia</a> – und das
+    <strong>4-Spalten-Layout</strong> auf
+    <a href="4.html">Robin's Fussballplatz</a>.
+  </p>
+
+</main>
+
+<script src="../js/navbar.js"></script>
 </body>
 </html>

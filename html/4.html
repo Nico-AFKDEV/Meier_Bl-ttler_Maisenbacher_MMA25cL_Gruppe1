@@ -3,16 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <title>Robin's Fussballplatz – MMA25cL Gruppe 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/4.css">
 </head>
 <body>
 
-  <div class="w3-container">
-    <h1>Heading</h1>
-    <p>Your content here.</p>
+<nav class="w3-bar w3-dark-green desktop-nav" id="navbar">
+  <div id="myNavItems">
+    <a href="../index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="2.html" class="w3-bar-item w3-button">Spalten</a>
+    <a href="3.html" class="w3-bar-item w3-button">Multimedia</a>
+    <a href="4.html" class="w3-bar-item w3-button aktiv">Robin's Fussballplatz</a>
+    <a href="5.html" class="w3-bar-item w3-button">Maurice's nexter.dev</a>
+    <a href="Playground.html" class="w3-bar-item w3-button">Nico Box</a>
   </div>
+</nav>
 
+<div class="topnav">
+  <a href="../index.html" class="active">Logo</a>
+  <div id="myLinks">
+    <a href="../index.html">Home</a>
+    <a href="2.html">Spalten</a>
+    <a href="3.html">Multimedia</a>
+    <a href="4.html">Robin's Fussballplatz</a>
+    <a href="5.html">Maurice's nexter.dev</a>
+    <a href="Playground.html">Nico Box</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- =============================================
+     HEADER
+     Robin's persönlicher Bereich beginnt hier.
+     ============================================= -->
+<header class="seiten-header">
+  <h1>Robin's Fussballplatz</h1>
+  <p>Mein kleiner digitaler Fussballplatz – hier geht's rund.</p>
+</header>
+
+<!-- =============================================
+     HAUPTINHALT
+     Robin schreibt über seinen Lieblingssport.
+     Vier Abschnitte: Warum Fussball, Verein, Position, Moment.
+     ============================================= -->
+<main class="w3-container seiteninhalt">
+
+  <!-- ─── Abschnitt 1: Warum überhaupt Fussball? ─── -->
+  <section class="abschnitt">
+    <h2>Warum Fussball?</h2>
+    <p>
+      Fussball ist für mich keine Freizeitbeschäftigung – es ist ein Lebensgefühl.
+      Das klingt pathetisch, ich weiss. Aber wer das erste Mal ein Tor geschossen hat
+      und danach diese zwei Sekunden Stille erlebt, bevor die Mitspieler draufspringen –
+      der weiss genau was ich meine.
+    </p>
+    <p>
+      Ich spiele seit dem Kindergarten. Angefangen auf der Strasse, dann Vereinsfussball,
+      heute kicke ich mit Kollegen wann immer sich die Gelegenheit ergibt.
+      Die Tore sind kleiner geworden. Der Spass ist geblieben.
+    </p>
+  </section>
+
+  <!-- ─── Abschnitt 2: Lieblingsverein ─── -->
+  <section class="abschnitt">
+    <h2>Mein Verein</h2>
+    <p>
+      Natürlich habe ich einen Lieblingsverein. Den nenne ich hier aber nicht,
+      weil ich dann wahrscheinlich die Hälfte der Klasse verliere.
+      Was ich sagen kann: es ist ein europäischer Club, der in den letzten Jahren
+      viel erlebt hat – Höhen und Tiefen, gute Trainer und schlechte,
+      unfassbare Momente und bittere Niederlagen.
+    </p>
+    <p>
+      Das macht Fussball aus. Es geht nicht nur ums Gewinnen.
+      Die Niederlagen gehören dazu – manchmal schmerzen sie fast mehr
+      als Siege glücklich machen.
+    </p>
+  </section>
+
+  <!-- ─── Abschnitt 3: Position auf dem Platz ─── -->
+  <section class="abschnitt">
+    <h2>Meine Position</h2>
+    <p>
+      Zentral im Mittelfeld. Da bin ich am liebsten.
+      Nicht der Stürmer, der nur auf das Tor wartet – und nicht der Torwart,
+      der minutenlang nichts zu tun hat und dann in Sekundenbruchteilen alles entscheiden muss.
+      Das Mittelfeld ist der Taktgeber, das Herzstück, das Bindeglied.
+    </p>
+    <p>
+      Ich mag es, Überblick zu haben. Den Ball zu verteilen, den Rhythmus zu bestimmen.
+      Manchmal mache ich das gut, manchmal weniger gut.
+      Aber es ist genau diese Kontrolle, die mich immer wieder aufs Feld zieht.
+    </p>
+  </section>
+
+  <!-- ─── Abschnitt 4: Ein unvergesslicher Moment ─── -->
+  <section class="abschnitt">
+    <h2>Unvergesslicher Moment</h2>
+    <p>
+      Es war ein Mittwochabend, Herbst. Wir lagen 2:0 zurück, zehn Minuten vor Schluss.
+      Dann drei Tore in zehn Minuten. 3:2.
+      Niemand hat das erwartet, niemand hat das geplant. Es ist einfach passiert.
+      Solche Momente sucht man.
+    </p>
+    <p>
+      Im Profifussball gibt es solche Spiele auch.
+      Das "Wunder von Bern", Istanbul 2005, die zweite Halbzeit in München 1999 –
+      Fussball schreibt manchmal Geschichten, die kein Drehbuchautor sich trauen würde
+      zu erfinden. Das ist der Grund, warum Millionen von Menschen Woche für Woche
+      ins Stadion gehen oder vor dem Fernseher kleben.
+    </p>
+  </section>
+
+  <!-- ─── ABSCHNITT 5: 4 SPALTEN – REAGIERT AUF GRÖSSE ───────
+       Desktop (>768px):  4 Spalten nebeneinander
+       Tablet  (≤768px):  2 Spalten (via Media Query)
+       Handy   (≤480px):  1 Spalte  (via Media Query)
+       ─────────────────────────────────────────────────────── -->
+  <h2 class="spalten-titel">4 Spalten – Fussball auf einen Blick</h2>
+
+  <section class="four-col-section">
+
+    <!-- Spalte 1: Seit wann -->
+    <div class="spalte">
+      <h2>Seit Kindergarten</h2>
+      <p>Angefangen auf der Strasse, dann Vereinsfussball, heute mit Kollegen.</p>
+    </div>
+
+    <!-- Spalte 2: Position -->
+    <div class="spalte">
+      <h2>Zentral-Mittelfeld</h2>
+      <p>Taktgeber, Herzstück, Bindeglied. Überblick behalten ist alles.</p>
+    </div>
+
+    <!-- Spalte 3: Was Fussball ausmacht -->
+    <div class="spalte">
+      <h2>Niederlagen gehören dazu</h2>
+      <p>Höhen und Tiefen, gute Trainer und schlechte. Das macht den Sport aus.</p>
+    </div>
+
+    <!-- Spalte 4: Unvergesslicher Moment -->
+    <div class="spalte">
+      <h2>3:2 nach 2:0</h2>
+      <p>Drei Tore in zehn Minuten. Niemand geplant, einfach passiert. Solche Momente sucht man.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="../js/navbar.js"></script>
 </body>
 </html>

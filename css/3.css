@@ -1,0 +1,147 @@
+/* ===================================================
+   3.css – Styles für html/3.html (Multimedia-Seite)
+
+   MULTIMEDIA = Bilder, Videos, Sounds auf einer Seite.
+   Wie ein Spielzeugkasten mit vielen verschiedenen Sachen.
+   =================================================== */
+
+
+/* ─── GRUNDLAGE DER SEITE ───────────────────────────
+   Das ist die Hintergrundfarbe der ganzen Seite.
+   Wie die Farbe der Wand – alles andere kommt davor. */
+body {
+  background-color: #f0f4f0; /* hellgrünes Grau – ruhig und sauber */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;      /* kein Aussenabstand */
+  color: #1a1a1a; /* fast schwarz – gut lesbar */
+}
+
+/* ─── HEADER (KOPFZEILE) GANZ OBEN ──────────────────
+   Der grosse grüne Balken oben auf der Seite.
+   Wie ein Namensschild an der Klassenzimmertür. */
+.seiten-header {
+  background-color: #2e7d32; /* dunkelgrün */
+  color: white;
+  padding: 30px 40px;
+}
+
+/* Haupttitel im Header */
+.seiten-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+}
+
+/* Kleiner Satz unter dem Haupttitel */
+.seiten-header p {
+  margin: 0;
+  opacity: 0.85; /* leicht durchsichtig – sieht eleganter aus */
+}
+
+/* ─── INHALTS-BEREICH ────────────────────────────────
+   Begrenzt die Breite des Texts – gut für die Augen.
+   "auto" bei margin zentriert alles automatisch. */
+.seiteninhalt {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ─── JEDE INHALTS-KARTE ─────────────────────────────
+   Jeder Abschnitt ist eine weisse Karte.
+   Links hat sie einen grünen Strich – wie ein Lesezeichen. */
+.abschnitt {
+  background-color: white;
+  border-radius: 8px;          /* abgerundete Ecken */
+  padding: 22px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); /* leichter Schatten */
+  border-left: 4px solid #4caf50;             /* grüner Strich links */
+}
+
+/* ─── ÜBERSCHRIFTEN IN DEN KARTEN ───────────────────
+   Dunkelgrün, damit man sieht wo ein neuer Teil anfängt. */
+.abschnitt h2 {
+  color: #2e7d32;
+  margin-top: 0;       /* kein extra Abstand oben */
+  margin-bottom: 12px;
+}
+
+/* ─── NORMALER TEXT ──────────────────────────────────
+   Grosser Zeilenabstand = die Zeilen haben mehr Luft.
+   Das macht lesen einfacher, so wie in einem Kinderbuch. */
+.abschnitt p {
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+/* ─── CODE IM TEXT ───────────────────────────────────
+   Wenn HTML-Code im Text steht, hat er einen
+   hellgrünen Hintergrund – sofort erkennbar! */
+.abschnitt code {
+  background-color: #e8f5e9; /* hellgrün */
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #1b5e20;
+}
+
+
+/* ===================================================
+   3 SPALTEN – VERSCHIEDENE BREITEN (1fr 2fr 1fr)
+
+   Desktop:  schmal | breit | schmal
+   Handy:    alles untereinander
+   =================================================== */
+
+/* Titel über dem 3-Spalten-Abschnitt */
+.spalten-titel {
+  color: #2e7d32;
+  font-size: 1.25rem;
+  margin: 40px 0 16px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4caf50;
+}
+
+/* CSS Grid: 1 Teil – 2 Teile – 1 Teil */
+.three-col-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+/* Jede Spalte ist eine weisse Karte mit grüner Linie oben */
+.three-col-section .spalte {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  border-top: 4px solid #4caf50;
+}
+
+.three-col-section .spalte h2 {
+  color: #2e7d32;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.three-col-section .spalte p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.three-col-section .spalte code {
+  background-color: #e8f5e9;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.88em;
+  color: #1b5e20;
+}
+
+/* Handy: alle drei untereinander */
+@media (max-width: 600px) {
+  .three-col-section {
+    grid-template-columns: 1fr;
+  }
+}
