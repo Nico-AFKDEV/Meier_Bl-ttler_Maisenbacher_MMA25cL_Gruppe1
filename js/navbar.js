@@ -1,3 +1,6 @@
+
+/*Hamburger Toggle*/
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
