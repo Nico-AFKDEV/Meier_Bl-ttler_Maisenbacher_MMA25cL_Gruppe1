@@ -46,6 +46,124 @@ body {
   padding: 0 20px;
 }
 
+/* ─── @keyframes = Schlüsselbilder einer Animation ──
+   "from" ist der Startpunkt, "to" der Endpunkt.
+   Der Browser berechnet alle Zwischenschritte selbst. */
+
+/* EINLAUF: Karte startet unsichtbar (opacity 0) und
+   30px tiefer, gleitet dann nach oben in Position. */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* scale() vergrössert/verkleinert das Element.
+   Mit opacity entsteht ein weiches "Herzschlag"-Gefühl. */
+@keyframes pulse {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%       { transform: scale(1.18); opacity: 0.75; }
+}
+
+/* Titel über dem Showcase */
+.showcase-titel {
+  color: #2e7d32;
+  font-size: 1.25rem;
+  margin: 40px 0 16px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4caf50;
+}
+
+/* Karte zentriert anzeigen */
+.media-showcase {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.media-showcase .media-card {
+  max-width: 280px;
+  width: 100%;
+}
+
+/* Karte: weiss, runde Ecke, grüner Streifen oben.
+   animation: fadeInUp läuft einmal beim Seitenaufruf. */
+.media-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+  border-top: 4px solid #4caf50;
+  animation: fadeInUp 0.6s ease both;
+  /* transition für Hover-Effekt (transform + shadow) */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover: Karte hebt sich 6px an und bekommt mehr Schatten. */
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+/* Icon-Bereich: feste Höhe, alles zentriert */
+.media-icon {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.media-card h3 {
+  color: #2e7d32;
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+}
+
+.media-card p {
+  color: #444;
+  font-size: 0.9rem;
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.media-card code {
+  background-color: #e8f5e9;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  color: #1b5e20;
+}
+
+/* ─── VIDEO-ICON ─────────────────────────────────────
+   Kreis (Ring) + Dreieck (Play-Pfeil) – reines CSS.
+   pulse lässt beides zusammen "atmen" (1.8s pro Zyklus). */
+.video-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-ring {
+  position: absolute;
+  width: 60px; height: 60px;
+  border: 4px solid #4caf50;
+  border-radius: 50%;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.play-dreieck {
+  width: 0; height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #4caf50;
+  margin-left: 5px; /* optische Mitte des Kreises */
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
 /* ===================================================
    3 SPALTEN – VERSCHIEDENE BREITEN (1fr 2fr 1fr)
 
@@ -99,7 +217,7 @@ body {
   color: #1b5e20;
 }
 
-/* Handy: alle drei untereinander */
+/* Handy: 3-Spalten-Grid untereinander stapeln */
 @media (max-width: 600px) {
   .three-col-section {
     grid-template-columns: 1fr;

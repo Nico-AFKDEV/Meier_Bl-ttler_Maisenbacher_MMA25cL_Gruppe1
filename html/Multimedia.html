@@ -49,6 +49,38 @@
 
 <main class="w3-container seiteninhalt">
 
+  <!-- ═══════════════════════════════════════════════════════
+       ANIMIERTES ELEMENT – Pulsierender Play-Button
+
+       ANIMATION: @keyframes pulse
+         0%/100% → scale(1),    opacity: 1     (Normalgrösse)
+             50% → scale(1.18), opacity: 0.75  (Vergrössert + leicht transparent)
+       Der Browser berechnet alle Schritte dazwischen selbst.
+
+       EINLAUF: Die Karte gleitet beim Laden von unten rein.
+       @keyframes fadeInUp: opacity 0→1, translateY 30px→0
+       ═══════════════════════════════════════════════════════ -->
+  <h2 class="showcase-titel">Animiertes Element</h2>
+
+  <section class="media-showcase">
+
+    <!-- PLAY-BUTTON: Kreis (play-ring) + Dreieck (play-dreieck).
+         Beides sind reine CSS-Formen – kein Bild, kein Icon-Font.
+         animation: pulse läuft endlos (infinite), alle 1.8 Sekunden. -->
+    <div class="media-card">
+      <div class="media-icon">
+        <div class="video-icon">
+          <div class="play-ring"></div>
+          <div class="play-dreieck"></div>
+        </div>
+      </div>
+      <h3>Video</h3>
+      <p>MP4 · WebM</p>
+      <p><code>&lt;video&gt;</code> mit <code>controls</code>.</p>
+    </div>
+
+  </section>
+
   <!-- ─── 3 SPALTEN – VERSCHIEDENE BREITEN ──────
        Desktop:  schmal (25%) | breit (50%) | schmal (25%)
        Die mittlere Spalte ist doppelt so breit wie die Randspalten.
