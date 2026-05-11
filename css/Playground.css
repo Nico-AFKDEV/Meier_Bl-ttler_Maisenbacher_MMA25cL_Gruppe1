@@ -1,15 +1,10 @@
 /* ===================================================
    Playground.css – Styles für html/Playground.html
-   (Nico Box)
-
-   Nico hat hier seinen eigenen Bereich.
-   Die Seite sieht gleich aus wie alle anderen –
-   nur der Inhalt ist anders.
    =================================================== */
 
 
 /* ─── GRUNDLAGE DER SEITE ───────────────────────────
-   Das ist die Hintergrundfarbe – wie die Wand im Zimmer. */
+   Das ist die Hintergrundfarbe – */
 body {
   background-color: #f0f4f0; /* hellgrünes Grau */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
