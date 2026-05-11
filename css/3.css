@@ -46,46 +46,6 @@ body {
   padding: 0 20px;
 }
 
-/* ─── JEDE INHALTS-KARTE ─────────────────────────────
-   Jeder Abschnitt ist eine weisse Karte.
-   Links hat sie einen grünen Strich – wie ein Lesezeichen. */
-.abschnitt {
-  background-color: white;
-  border-radius: 8px;          /* abgerundete Ecken */
-  padding: 22px 28px;
-  margin-bottom: 28px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); /* leichter Schatten */
-  border-left: 4px solid #4caf50;             /* grüner Strich links */
-}
-
-/* ─── ÜBERSCHRIFTEN IN DEN KARTEN ───────────────────
-   Dunkelgrün, damit man sieht wo ein neuer Teil anfängt. */
-.abschnitt h2 {
-  color: #2e7d32;
-  margin-top: 0;       /* kein extra Abstand oben */
-  margin-bottom: 12px;
-}
-
-/* ─── NORMALER TEXT ──────────────────────────────────
-   Grosser Zeilenabstand = die Zeilen haben mehr Luft.
-   Das macht lesen einfacher, so wie in einem Kinderbuch. */
-.abschnitt p {
-  line-height: 1.75;
-  margin-bottom: 10px;
-}
-
-/* ─── CODE IM TEXT ───────────────────────────────────
-   Wenn HTML-Code im Text steht, hat er einen
-   hellgrünen Hintergrund – sofort erkennbar! */
-.abschnitt code {
-  background-color: #e8f5e9; /* hellgrün */
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 0.9em;
-  color: #1b5e20;
-}
-
-
 /* ===================================================
    3 SPALTEN – VERSCHIEDENE BREITEN (1fr 2fr 1fr)
 

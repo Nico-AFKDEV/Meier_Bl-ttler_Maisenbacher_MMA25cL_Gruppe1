@@ -47,87 +47,9 @@
   <p>Was Bilder, Videos und Töne im Web eigentlich bedeuten</p>
 </header>
 
-<!-- =============================================
-     HAUPTINHALT
-     Hier beginnt der eigentliche Text der Seite.
-     Drei Abschnitte: Was ist Multimedia, Bilder, Videos, Audio.
-     ============================================= -->
 <main class="w3-container seiteninhalt">
 
-  <!-- ─── Abschnitt 1: Was ist Multimedia? ─── -->
-  <section class="abschnitt">
-    <h2>Was ist Multimedia überhaupt?</h2>
-    <p>
-      Multimedia ist eigentlich nichts Neues – das Wort gibt es seit den 90ern.
-      Aber die Bedeutung hat sich komplett verändert. Damals war ein blinkendes GIF
-      auf einer Website schon "Multimedia". Heute scrollen wir durch Instagram,
-      schauen gleichzeitig eine Netflix-Serie, haben Spotify im Hintergrund und wundern
-      uns, warum der Laptop warm wird. Das ist Multimedia im Jahr 2025.
-    </p>
-    <p>
-      Für uns als angehende Mediamatiker ist Multimedia kein Fremdwort sondern Alltag.
-      Die Frage ist nur, wie man es richtig einsetzt – und wann es zu viel des Guten wird.
-    </p>
-  </section>
-
-  <!-- ─── Abschnitt 2: Bilder ─── -->
-  <section class="abschnitt">
-    <h2>Bilder</h2>
-    <p>
-      Bilder sind wahrscheinlich das häufigste Multimedia-Element im Web.
-      Egal ob JPEG, PNG oder SVG – ohne Bilder wäre das Internet ein ziemlich
-      graues Textmeer. Wer mal eine Seite ohne Bilder gesehen hat, weiss was ich meine.
-    </p>
-    <p>
-      In HTML bindet man Bilder mit <code>&lt;img&gt;</code> ein – und das
-      <code>alt</code>-Attribut vergisst man dabei bitte nicht. Nicht nur für
-      Barrierefreiheit (wichtig für Menschen mit Sehbehinderung), sondern auch weil
-      Suchmaschinen wie Google keinen Inhalt "sehen" können – sie lesen den Alt-Text.
-    </p>
-    <p>
-      Moderne Bildformate wie WebP oder AVIF können dieselbe Qualität bei deutlich
-      kleinerer Dateigrösse liefern. Das bedeutet: die Seite lädt schneller.
-      Auf dem Handy mit schlechtem 4G-Signal ist das kein Luxus, das ist Grundvoraussetzung.
-    </p>
-  </section>
-
-  <!-- ─── Abschnitt 3: Videos ─── -->
-  <section class="abschnitt">
-    <h2>Videos</h2>
-    <p>
-      YouTube hat 2005 angefangen und das Web seither komplett verändert.
-      Heute ist Video-Content die meistkonsumierte Medienform – laut Statistiken
-      schauen Menschen weltweit täglich über eine Milliarde Stunden YouTube.
-      Das ist eine absurde Zahl, wenn man sie mal kurz auf sich wirken lässt.
-    </p>
-    <p>
-      Für uns als Webentwickler bedeutet das: wir müssen wissen, wie man Videos
-      vernünftig einbettet. Der einfachste Weg ist ein iframe von YouTube oder Vimeo –
-      man kopiert den Embed-Code und fertig. Wer eigene Videos hosten möchte, nutzt
-      den HTML5 <code>&lt;video&gt;</code>-Tag mit verschiedenen Quell-Formaten
-      (MP4, WebM), damit möglichst jeder Browser etwas abspielen kann.
-    </p>
-  </section>
-
-  <!-- ─── Abschnitt 4: Audio ─── -->
-  <section class="abschnitt">
-    <h2>Audio</h2>
-    <p>
-      Audio ist das am häufigsten vergessene Multimedia-Element. Dabei kennt jeder
-      diese kleinen Sounds, die eine App gut machen: das "Pling" bei einer neuen Nachricht,
-      das Bestätigungssignal beim Online-Kauf, die Hintergrundmusik auf einer Event-Website.
-      Diese Töne sind kein Zufall – die sind designed.
-    </p>
-    <p>
-      Mit dem <code>&lt;audio&gt;</code>-Tag in HTML5 kann man Audiodateien direkt einbinden.
-      Das <code>controls</code>-Attribut gibt dem Nutzer eine Play/Pause-Schaltfläche.
-      Man sollte aber aufpassen: Autoplay mit Ton ist inzwischen in den meisten Browsern
-      standardmässig blockiert – aus gutem Grund, denn nichts nervt mehr als eine Seite,
-      die beim Öffnen sofort Musik spielt ohne gefragt zu werden.
-    </p>
-  </section>
-
-  <!-- ─── ABSCHNITT 5: 3 SPALTEN – VERSCHIEDENE BREITEN ──────
+  <!-- ─── 3 SPALTEN – VERSCHIEDENE BREITEN ──────
        Desktop:  schmal (25%) | breit (50%) | schmal (25%)
        Die mittlere Spalte ist doppelt so breit wie die Randspalten.
        Handy:    alles untereinander (grid-template-columns: 1fr)
