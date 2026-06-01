@@ -5,9 +5,9 @@
   und eine lesbare Schrift.
 */
 body {
-    background-color: #4deb6f;
+    background-color: #eef3ef;
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: '', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -16,7 +16,7 @@ h1,
 h3,
 h5 {
     text-align: left;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fugaz One', cursive;
     font-weight: 1000;
     padding-bottom: 20px;
     margin: 0;
@@ -24,147 +24,11 @@ h5 {
 
 /* Fließtext style: klarer Kontrast zur Überschrift und ohne zusätzlichen Rand. */
 p {
-    font-family: 'Zalando Sans SemiExpanded', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     margin: 0;
 }
 
-/* Abstand für die Kopfzeile: Abstand zum Seitenrand geben. */
-header {
-    margin: 50px;
-}
-
-
-/* Navbar */
-nav.w3-bar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin: 15px auto;
-    width: 95%;
-    border-radius: 30px;
-    background-color: #53f375;
-    border: 1px solid #3bc972;
-    align-content: center;
-    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-/* Styling für jeden einzelnen Navigationslink. */
-nav.w3-bar .w3-bar-item {
-    font-weight: 700;
-    color: black;
-    background-color: transparent;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    text-align: center;
-    padding: 10px 12px;
-    min-width: 140px;
-    max-width: 95%;
-}
-
-/* Desktop-Navigation: bleibt beim Scrollen oben sichtbar. */
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-/* Link-Layout in der Desktop-Navigation. */
-.desktop-nav a {
-    display: inline-block;
-}
-
-/* Mobiles Menü: nur bei kleinen Bildschirmen sichtbar. */
-.topnav {
-    overflow: hidden;
-    background-color: #2d6a2d;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: none;
-}
-
-/* Dieser Bereich verbirgt die mobilen Link-Elemente, bis das Menü geöffnet wird. */
-.topnav #myLinks {
-    display: none;
-}
-
-/* Styling für mobile Links: gut anklickbar und sichtbar. */
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-}
-
-/* Hamburger-Button im mobilen Menü: bleibt oben rechts. */
-.topnav a.icon {
-    background: none;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-}
-
-/* Hover-Effekt bei mobilen Links, damit man sieht, was angeklickt wird. */
-.topnav a:hover {
-    background-color: #04AA6D;
-    color: white;
-}
-
-
-
-
-
-/* Responsive Regeln: kleine Bildschirme */
-/* Ab hier wird das Menü für Mobilgeräte umgebaut. */
-@media (max-width: 600px) {
-    nav.w3-bar {
-        flex-direction: column;
-        width: 90%;
-        padding: 10px 0;
-        align-content: flex-start;
-    }
-
-    nav.w3-bar .w3-bar-item {
-        display: none;
-        width: 100%;
-        padding: 12px 0;
-        text-align: center;
-        border-radius: 0;
-    }
-}
-
-@media (max-width: 768px) {
-  /* Bei mittleren Bildschirmen wird die Desktop-Navigation ausgeblendet,
-     damit das mobile Menü erscheint. */
-  .desktop-nav {
-    display: none !important;
-  }
-  
-  .topnav {
-    display: block !important;
-  }
-  
-}
-
-/* Noch kleinere Bildschirme bekommen engere Abstände. */
-@media (max-width: 450px) {
-    /* Sehr schmale Displays bekommen noch etwas Platz zwischen den Links. */
-    nav.w3-bar {
-        gap: 8px;
-    }
-
-    nav.w3-bar .w3-bar-item {
-        font-size: 14px;
-        padding: 10px 8px;
-    }
-}
 
 
 

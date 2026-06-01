@@ -1,37 +1,21 @@
 /* 
    Lazy Load Video Script
    
-   Dokumentation und Implementierung: Lazy Loading für Videos mit Intersection Observer
+   Dokumentation und Implementierung: Lazy Loading für Video.
    
    Basiert auf W3Schools:
    https://www.w3schools.com/jsref/api_intersectionobserver.asp
    https://www.w3schools.com/html/html5_video.asp
-   
-   Was macht dieses Script?
-
-   1. Es sucht nach allen Video-Elementen mit der Klasse "lazy-video"
-   2. Es verwendet die Intersection Observer API um zu erkennen, wenn ein Video sichtbar wird
-   3. Es lädt das Video nur, wenn der Benutzer sich dem Video nähert
-   4. Das spart Bandbreite und macht die Seite schneller
-   
   
 */
 
-// Starte das Script wenn die Seite vollständig geladen ist
+// Start wenn Script geladen
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Lazy Load Script geladen - initialisiere Video Lazy Loading');
     initLazyLoadVideos();
 });
 
-/**
- * Hauptfunktion für Lazy Loading Videos
- * 
- * Diese Funktion:
- * 1. Findet alle Videos mit der Klasse "lazy-video"
- * 2. Erstellt einen Intersection Observer
- * 3. Überwacht jeden Video-Container
- * 4. Lädt Videos wenn sie sichtbar werden
- */
+
 function initLazyLoadVideos() {
     // Finde alle Videos mit der Klasse "lazy-video"
     const lazyVideos = document.querySelectorAll('.lazy-video');

@@ -6,7 +6,6 @@
   <title>Multimedia – MMA25cL Gruppe 1</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="../index.css">
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/3.css">
 </head>
@@ -96,45 +95,32 @@ hier auch mit id gearbeitet, damit ich die mobile und desktop nav mit einem scri
 
   </section>
 
-  <!-- ─── 3 SPALTEN – VERSCHIEDENE BREITEN ──────
-       Desktop:  schmal (25%) | breit (50%) | schmal (25%)
-       Die mittlere Spalte ist doppelt so breit wie die Randspalten.
-       Handy:    alles untereinander (grid-template-columns: 1fr)
-       ─────────────────────────────────────────────────────── -->
-  <h2 class="spalten-titel">3 Spalten – Die drei Multimedia-Typen</h2>
 
-  <section class="three-col-section">
+<!-- W3C School Card Umsetzung
+ 
+https://www.w3schools.com/w3css/w3css_cards.asp
 
-    <!-- Schmale Spalte links: Bild-Infos -->
-    <div class="spalte">
-      <h2>Bilder</h2>
-      <p>JPEG, PNG, WebP, SVG.</p>
-      <p>Immer ein <code>alt</code>-Attribut angeben – für Barrierefreiheit und Suchmaschinen.</p>
+-->
+
+  <div class="w3-container">
+  <h2>Card Beispiel</h2>
+
+  <div class="w3-card-4 w3-white" style="width:50%">
+
+    <div class="w3-container w3-center">
+      <h3 class="center-h3">Anruf von</h3>
+      <img src="../img/ohne.webp" alt="Avatar" style="width:50%">
+      <h5 class="center-h5">Ohne Schnitzel</h5>
+
+      <div class="w3-section">
+        <button class="w3-button w3-green">Accept</button>
+        <button class="w3-button w3-red">Decline</button>
+      </div>
     </div>
 
-    <!-- Breite Spalte Mitte: Haupt-Erklärung -->
-    <div class="spalte">
-      <h2>Was macht gutes Multimedia aus?</h2>
-      <p>
-        Gutes Multimedia fällt nicht auf – es unterstützt den Inhalt, ohne abzulenken.
-        Ein Bild sagt mehr als tausend Worte, stimmt. Aber ein falsch gewähltes Bild
-        sagt tausend falsche Worte. Dasselbe gilt für Video und Audio.
-      </p>
-      <p>
-        Im CSS: <code>grid-template-columns: 1fr 2fr 1fr</code> – die mittlere
-        Spalte bekommt doppelt so viel Platz, weil hier der Hauptinhalt steht.
-        Auf dem Handy stapelt sich alles untereinander.
-      </p>
-    </div>
+  </div>
+</div>
 
-    <!-- Schmale Spalte rechts: Video-/Audio-Infos -->
-    <div class="spalte">
-      <h2>Video &amp; Audio</h2>
-      <p>MP4, WebM für Video.</p>
-      <p>MP3, OGG für Audio. Beide brauchen <code>controls</code> für den Nutzer.</p>
-    </div>
-
-  </section>
 
 </main>
 
