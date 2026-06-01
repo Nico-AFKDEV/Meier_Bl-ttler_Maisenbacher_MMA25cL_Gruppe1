@@ -74,3 +74,70 @@ body {
   margin-bottom: 10px;
   color: #1a1a1a; /* dunkler Text */
 }
+
+
+/* ===================================================
+   3 SPALTEN – UNTERSCHIEDLICHE BREITEN
+
+   Desktop:     3 Spalten mit 2fr | 1fr | 1fr
+                → Linke Spalte ist doppelt so breit
+                  wie jede der beiden rechten Spalten.
+                  Das erfüllt: "mind. 2 unterschiedliche
+                  Spaltenbreiten".
+
+   Smartphone:  Alle Spalten stapeln sich (1fr = volle Breite).
+   =================================================== */
+
+/* Titel über dem Spalten-Abschnitt – gleich wie auf Spalten.html */
+.spalten-titel {
+  color: #2e7d32;
+  font-size: 1.25rem;
+  margin: 0 0 16px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4caf50; /* grüne Linie unter dem Titel */
+}
+
+/* Das Grid-Container-Element – definiert die 3 Spalten */
+.three-col-section {
+  display: grid;
+
+  /* 2fr = doppelt so breit wie 1fr → zwei unterschiedliche Breiten */
+  grid-template-columns: 2fr 1fr 1fr;
+
+  gap: 16px;          /* Abstand zwischen den Spalten */
+  margin-bottom: 48px;
+}
+
+/* Jede einzelne Spalte: weisse Karte mit grünem Strich unten */
+.three-col-section .spalte {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07); /* leichter Schatten */
+  border-bottom: 4px solid #4caf50;           /* grüner Strich unten */
+}
+
+/* Überschriften in den Spalten */
+.three-col-section .spalte h2 {
+  color: #2e7d32;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/* Fliesstext in den Spalten */
+.three-col-section .spalte p {
+  line-height: 1.65;
+  font-size: 0.9rem;
+  margin: 0 0 6px 0;
+  color: #1a1a1a;
+}
+
+/* ─── SMARTPHONE-ANSICHT ─────────────────────────────
+   Unterhalb von 600px stapeln sich alle 3 Spalten.
+   grid-template-columns: 1fr = eine Spalte, volle Breite.
+   So bleibt alles gut lesbar auf kleinen Bildschirmen. */
+@media (max-width: 600px) {
+  .three-col-section {
+    grid-template-columns: 1fr;
+  }
+}

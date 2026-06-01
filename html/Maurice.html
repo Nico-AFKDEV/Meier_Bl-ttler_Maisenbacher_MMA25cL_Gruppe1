@@ -53,9 +53,64 @@ hier auch mit id gearbeitet, damit ich die mobile und desktop nav mit einem scri
 </div>
 
 <header class="seiten-header">
-  <h1>Maurice</h1>
-  <p>loremloremloremlorem</p>
+  <h1>Maurice's VELO Böxli</h1>
+  <p>Drei Spalten – Hauptinhalt breit, zwei schmale Infospalten</p>
 </header>
+
+<!-- ─── HAUPT-INHALTSBEREICH ──────────────────────────────────────────────
+     .seiteninhalt begrenzt die maximale Breite und zentriert den Inhalt.
+     Gleiche Klasse wie auf allen anderen Seiten (Spalten, Robin, etc.).
+     ─────────────────────────────────────────────────────────────────── -->
+<main class="seiteninhalt">
+
+  <!-- Titel über dem 3-Spalten-Abschnitt – gleiche .spalten-titel Klasse
+       wie auf Spalten.html, damit das Design einheitlich bleibt -->
+  <h2 class="spalten-titel">3 Spalten – Hauptinhalt + zwei Infospalten</h2>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       3-SPALTEN-LAYOUT
+
+       Desktop (>600px):  3 Spalten – 2fr | 1fr | 1fr
+                          → Die linke Spalte ist DOPPELT so breit wie
+                            die beiden rechten. Damit sind ZWEI
+                            unterschiedliche Spaltenbreiten vorhanden.
+
+       Smartphone (≤600px): alle Spalten stapeln sich untereinander
+                            (grid-template-columns: 1fr via Media Query)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="three-col-section">
+
+    <!-- Spalte 1: BREIT (2fr) – Hauptinhalt -->
+    <div class="spalte col-haupt">
+      <h2>Mein VELO</h2>
+      <p>
+        Ich fahre seit Jahren Velo – Pendeln, Ausflüge, Trails.
+        Das Fahrrad ist für mich mehr als Transport, es ist Freiheit.
+        Egal ob Regen oder Sonne, das Velo steht bereit.
+      </p>
+      <p>
+        Aktuell fahre ich ein Gravel Bike, das sich gleichzeitig auf
+        Strasse und Schotter wohlfühlt – das perfekte Allround-Rad.
+      </p>
+    </div>
+
+    <!-- Spalte 2: SCHMAL (1fr) – erste Infospalte -->
+    <div class="spalte col-info">
+      <h2>Modell</h2>
+      <p>Canyon Gravel CF SL 8</p>
+      <p>Baujahr 2023</p>
+      <p>Gewicht: 8.4 kg</p>
+    </div>
+
+    <!-- Spalte 3: SCHMAL (1fr) – zweite Infospalte -->
+    <div class="spalte col-info">
+      <h2>Stats</h2>
+      <p>~120 km / Woche</p>
+      <p>Lieblingsroute: Aare-Radweg</p>
+      <p>Getriebe: 2x11-fach</p>
+    </div>
+
+  </section>
 
 </main>
 
