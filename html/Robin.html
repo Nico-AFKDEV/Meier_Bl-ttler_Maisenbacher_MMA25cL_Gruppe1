@@ -94,30 +94,21 @@ hier auch mit id gearbeitet, damit ich die mobile und desktop nav mit einem scri
 
 
 
-  <h2>Animated Accordions</h2>
-<p>Use any of the w3-animate-classes to fade, zoom or slide in the accordion content (w3-animate-zoom|opacity|top|bottom|left|right):</p>
+  <h2>Animated Accordion</h2>
+
 
 <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align">Accordion</button>
 <div id="Demo1" class="w3-hide w3-animate-zoom">
-  <a href="#" class="w3-button w3-block w3-left-align">Link 1</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 2</a>
-  <a href="#" class="w3-button w3-block w3-left-align">Link 3</a>
+  <a href="../html/Maurice.html" class="w3-button w3-block w3-left-align">Maurice's VELO Böxli</a>
+  <a href="../html/Nico.html" class="w3-button w3-block w3-left-align">Nico's BOAH KA</a>
+  <a href="../html/Multimedia.html" class="w3-button w3-block w3-left-align">Multimedia</a>
   </div>
 </div>
 
-<script>
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
 
 </main>
 
 <script src="../js/navbar.js"></script>
+<script src="../js/accordion.js"></script>
 </body>
 </html>
