@@ -58,7 +58,7 @@ Diese Funktion:
 1. Nimmt den data-src Attribut (echte Video-URL)
 2. Setzt ihn in den src Attribut
 3. Startet das Preloading des Videos
-  4. Gibt Feedback in der Console
+4. Gibt Feedback in der Console
  
   Parameter:
 video - Das HTML Video-Element
@@ -99,68 +99,3 @@ function loadVideo(video) {
     video.load();
 }
 
-// ============================================
-// DOCUMENTATION / ERKLÄRUNG FÜR W3SCHOOLS
-// ============================================
-
-/*
-LAZY LOADING MIT INTERSECTION OBSERVER - SCHRITT FÜR SCHRITT ERKLÄRUNG:
-
-1. HTML SETUP:
-   <video class="lazy-video" data-src="mein-video.mp4" controls></video>
-   
-   - Klasse "lazy-video": Damit kann das Script das Video finden
-   - data-src: Speichert den echten Video-Pfad
-   - Ohne src Attribut wird Video nicht sofort geladen
-
-2. INTERSECTION OBSERVER API:
-   Überwacht Elemente und erkennt wann sie sichtbar werden:
-   
-   new IntersectionObserver(callback, options)
-   
-   - callback: Funktion die aufgerufen wird wenn Element sichtbar wird
-   - options: Einstellungen wie z.B. rootMargin
-
-3. ROOTMARGIN:
-   rootMargin: '100px'
-   
-   Bedeutet: Laden des Videos startet 100px bevor es sichtbar ist
-   Das gibt dem Video Zeit zu laden bevor Nutzer es sieht
-
-4. LOADINDUSTRY PROCESS:
-   a) Page lädt - Videos werden NICHT geladen
-   b) Nutzer scrollt
-   c) Video kommt in Nähe (100px Margin)
-   d) isIntersecting wird true
-   e) loadVideo() Funktion wird aufgerufen
-   f) src Attribut wird gesetzt
-   g) Video wird geladen
-
-5. EVENT LISTENER:
-   - 'canplay': Video ist bereit zum Abspielen
-   - 'error': Video konnte nicht geladen werden
-   
-   Mit {once: true} wird der Listener nach einmaligem Aufruf gelöscht
-
-VORTEILE:
-✓ Video wird nur geladen wenn Nutzer es wahrscheinlich sieht
-✓ Spart Bandbreite
-✓ Schnelleres initiiales Laden der Seite
-✓ Bessere Performance auf mobilen Geräten
-✓ Ressourceneffizienz
-
-BROWSER KOMPATIBILITÄT:
-✓ Chrome 51+
-✓ Firefox 55+
-✓ Safari 12.1+
-✓ Edge 16+
-
-DEBUGGING:
-- Öffne Browser Developer Tools (F12)
-- Gehe zu Console
-- Scrolle zur Nico Seite
-- Du wirst Nachrichten sehen wie:
-  "1 Lazy Loading Video(s) gefunden"
-  "Lade Video: ../img/rickroll.mp4"
-  "Video erfolgreich geladen: ../img/rickroll.mp4"
-*/
