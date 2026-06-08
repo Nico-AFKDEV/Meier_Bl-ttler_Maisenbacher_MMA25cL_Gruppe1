@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="rasen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3aa757"/>
+      <stop offset="1" stop-color="#2e7d32"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#rasen)"/>
+  <g fill="#37985096">
+    <rect x="0" y="0" width="150" height="500"/>
+    <rect x="300" y="0" width="150" height="500"/>
+    <rect x="600" y="0" width="150" height="500"/>
+    <rect x="900" y="0" width="150" height="500"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="5" opacity="0.85">
+    <rect x="30" y="30" width="1140" height="440"/>
+    <line x1="600" y1="30" x2="600" y2="470"/>
+    <circle cx="600" cy="250" r="80"/>
+    <rect x="30" y="140" width="130" height="220"/>
+    <rect x="1040" y="140" width="130" height="220"/>
+  </g>
+  <circle cx="600" cy="250" r="9" fill="#ffffff"/>
+</svg>

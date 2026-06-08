@@ -175,3 +175,28 @@ body {
   color: #2e7d32;
   margin: 0 0 8px 0;
 }
+
+.audio-showcase {
+  max-width: 420px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.audio-showcase h2 {
+  color: #2e7d32;
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+}
+
+.audio-showcase p {
+  color: #444;
+  font-size: 0.9rem;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.audio-player {
+  width: 100%;
+  outline: 3px solid #4caf50;
+  border-radius: 30px;
+}

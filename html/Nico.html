@@ -6,6 +6,7 @@
 <title>Nico's BOAH KA</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Google API mega geil date chlaue #ILOVEGOOGLE-->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
 <link rel="stylesheet" href="../index.css">
 <link rel="stylesheet" href="../css/nav.css">
 <link rel="stylesheet" href="../css/nico.css">
@@ -79,12 +80,14 @@ Das Video wird dann mit JavaScript geladen wenn es sichtbar wird.
 
 <main class="w3-container video-container">
   <div class="video-wrapper">
-    <video 
-      width="100%" 
+    <video
+      class="lazy-video"
+      data-src="../img/rick.mp4"
+      width="100%"
       height="auto"
       controls
+      preload="none"
       poster="../img/ohne.webp">
-      <source src="../img/rick.mp4" type="video/mp4" preload="none" class="lazy-video">
       Dein Browser unterstützt HTML5 Video nicht.
     </video>
   </div>

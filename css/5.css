@@ -141,3 +141,21 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.modal-bereich {
+  margin: 40px 0 48px;
+}
+
+.modal-box {
+  max-width: 480px;
+}
+
+.modal-box header h2 {
+  margin: 0;
+  padding: 12px 0;
+  color: #ffffff;
+}
+
+.modal-box .w3-container p {
+  line-height: 1.7;
+}
