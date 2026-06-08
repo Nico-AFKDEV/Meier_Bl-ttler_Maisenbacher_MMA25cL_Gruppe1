@@ -52,16 +52,16 @@ function initLazyLoadVideos() {
 }
 
 /**
- * Lädt ein Video
- * 
- * Diese Funktion:
- * 1. Nimmt den data-src Attribut (echte Video-URL)
- * 2. Setzt ihn in den src Attribut
- * 3. Startet das Preloading des Videos
- * 4. Gibt Feedback in der Console
- * 
- * Parameter:
- * video - Das HTML Video-Element
+Lädt ein Video
+
+Diese Funktion:
+1. Nimmt den data-src Attribut (echte Video-URL)
+2. Setzt ihn in den src Attribut
+3. Startet das Preloading des Videos
+  4. Gibt Feedback in der Console
+ 
+  Parameter:
+video - Das HTML Video-Element
  */
 function loadVideo(video) {
     console.log('Lade Video: ' + video.getAttribute('data-src'));

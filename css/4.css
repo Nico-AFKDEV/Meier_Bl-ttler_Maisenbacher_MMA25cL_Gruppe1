@@ -138,6 +138,9 @@ body {
   }
 }
 
+/* ─── BILD MIT TEXT ─────────────────────────────────
+   Container für das Bild mit Text darüber.
+   overflow: hidden schneidet das Bild an den runden Ecken sauber ab. */
 .bild-mit-text {
   margin-bottom: 36px;
   border-radius: 10px;

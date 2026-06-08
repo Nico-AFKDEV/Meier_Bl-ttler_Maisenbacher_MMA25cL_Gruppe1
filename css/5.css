@@ -142,6 +142,9 @@ body {
   }
 }
 
+/* ─── MODAL-FENSTER ─────────────────────────────────
+   Abstände und Grösse des Modal-Bereichs.
+   .modal-box begrenzt die Breite auf 480px. */
 .modal-bereich {
   margin: 40px 0 48px;
 }

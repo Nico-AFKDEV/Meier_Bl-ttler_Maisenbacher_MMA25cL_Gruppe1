@@ -176,6 +176,9 @@ body {
   margin: 0 0 8px 0;
 }
 
+/* ─── AUDIO-PLAYER ───────────────────────────────────
+   Zentrierter Bereich mit grünem Rahmen um den Player.
+   Passt farblich ins bestehende Grün. */
 .audio-showcase {
   max-width: 420px;
   margin: 0 auto 48px;
